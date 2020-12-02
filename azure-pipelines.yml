@@ -8,7 +8,7 @@ trigger:
 - sync
 
 pool:
-  vmImage: 'window-latest'
+  vmImage: 'windows-latest'
 
 steps:
 - task: CmdLine@2
