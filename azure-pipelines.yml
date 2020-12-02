@@ -16,12 +16,12 @@ steps:
     script: |
       git config --global user.email "wahube@microsoft.com"
       git config --global user.name "wany"
-- bash: |
-    git push --prune https://$(GITHUB_PAT)@github.com/wandrille-hubert/githubsync.git \
-        +refs/remotes/origin/*:refs/heads/* +refs/tags/*:refs/tags/*
-  displayName: 'Copy to Github'
+#- bash: |
+#    git push --prune https://$(GITHUB_PAT)@github.com/wandrille-hubert/githubsync.git \
+#        +refs/remotes/origin/*:refs/heads/* +refs/tags/*:refs/tags/*
+#  displayName: 'Copy to Github'
 
 #steps:
-#- script: |
-#    git push https://$(GITHUB_PAT)@github.com/wandrille-hubert/githubsync.git head:refs/heads/main
+- script: |
+    git push https://$(GITHUB_PAT)@github.com/wandrille-hubert/githubsync.git head:refs/heads/main
 
