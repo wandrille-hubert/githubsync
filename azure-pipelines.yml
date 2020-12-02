@@ -16,6 +16,8 @@ steps:
     script: |
       git config --global user.email "wahube@microsoft.com"
       git config --global user.name "wany"
+      git add .
+      git commit -m "And so, it begins."
 #- bash: |
 #    git push --prune https://$(GITHUB_PAT)@github.com/wandrille-hubert/githubsync.git \
 #        +refs/remotes/origin/*:refs/heads/* +refs/tags/*:refs/tags/*
