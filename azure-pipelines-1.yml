@@ -6,10 +6,5 @@ pool:
 
 steps:
 - task: CmdLine@2
-  inputs:
-    script: |
-      git config --global user.email "wahube@microsoft.com"
-      git config --global user.name "wany"
-      git pull --force
 - script: |
     git push https://$(GITHUB_PAT)@github.com/wandrille-hubert/githubsync.git head:refs/heads/main
