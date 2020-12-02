@@ -10,6 +10,12 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- script: |
-    git push https://$(GITHUB_PAT)@github.com/wandrille-hubert/githubsync.git head:refs/heads/main
+- bash: |
+    git push --prune https://$(GITHUB_PAT)@github.com/wandrille-hubert/githubsync.git \
+        +refs/remotes/origin/*:refs/heads/* +refs/tags/*:refs/tags/*
+  displayName: 'Copy to Github'
+
+#steps:
+#- script: |
+#    git push https://$(GITHUB_PAT)@github.com/wandrille-hubert/githubsync.git head:refs/heads/main
 
