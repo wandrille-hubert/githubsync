@@ -16,6 +16,7 @@ steps:
     script: |
       git config --global user.email "wahube@microsoft.com"
       git config --global user.name "wany"
+      cd $(Build.SourcesDirectory)
       git add .
       git commit -m "And so, it begins."
 #- bash: |
